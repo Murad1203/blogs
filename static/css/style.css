@@ -1,0 +1,144 @@
+*,
+*::after,
+*::before
+ {
+
+    box-sizing: border-box;
+
+}
+body {
+    font-size: 17px;
+    line-height: 27px;
+    font-weight: 300;
+    
+}
+
+.header__top {
+    height: 130px;
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+
+.container {
+
+    max-width: 1260px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 10px;
+
+
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav_p {
+    
+    
+    font-size: x-large;
+    font-family: inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    
+
+}
+
+.ob_2 button {
+    
+    text-transform: none;
+    -webkit-appearance: button;
+    height: 30px;
+    border-radius: 3px;
+    border: none;
+    padding: 0 10px;
+    transition: background 250ms;
+    background: transparent;
+    outline: none;
+    font-weight: 500;
+    font-size: 15px;
+    cursor: pointer;
+    
+    
+}
+.ob_2:hover {
+    background-color: #f9f5f1;
+	
+}
+
+.ob {
+    list-style: none;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    
+    margin-top: 50px;
+    
+    
+    
+}
+td, th, ul {
+    padding: 0;
+}
+
+
+
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    
+    
+    margin-right: auto;
+    
+}
+
+.foot {
+    
+    
+    
+    margin-top: 50px;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    align-items: center;
+    list-style: none;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    
+
+}
+
+.foot_2 {
+    text-transform: none;
+    -webkit-appearance: button;
+    height: 30px;
+    border-radius: 3px;
+    border: none;
+    
+    transition: background 250ms;
+    background: transparent;
+    outline: none;
+    font-weight: 500;
+    font-size: 15px;
+    cursor: pointer;
+}
+.foot_2:hover {
+    background-color: #f9f5f1;
+	
+}
+
