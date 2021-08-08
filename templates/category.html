@@ -2,30 +2,23 @@
 {% load static %}
 
 
-{% block lenta %}
-<div class="h">
-    
-    <h1 class="header__title">
-        Лента
-    </h1>
 
-</div>
-{% endblock %}
+
 
 {% block index %}
 
-    
-
-
-    
+    <h1>{{ category.title }}</h1>
     <div class="header__cont">
         {% for item in content %}
     <div class="header__con">
+
         <div class="contents">
+
             <p class="User">user</p>
+
             <img class="header__img" src="{{ item.photo.url }}" alt="" width="580px" height="315">
 
-                <h2>{{ item.title|safe|truncatewords:4 }}</h2>
+                <h2>{{ item.title }}</h2>
 
             <div class="content__line">
 
@@ -38,13 +31,8 @@
             </div>
             <div class="is__published">
             <div class="published">
-               Дата: {{  item.created_at|date:"SHORT_DATE_FORMAT"  }}
+                {{  item.created_at|date:"SHORT_DATE_FORMAT"  }}
             </div>
-
-            <div class="categ">
-                Категория: {{item.category}}
-            </div>
-
         </div>
         </div>
         
@@ -81,12 +69,7 @@
     {% endfor %}
 
     </div>
-    
 
-
-    
-    
-    
 
 {% endblock %}
 

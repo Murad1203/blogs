@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block add_news %}
+<h1>Добавление блога</h1>
+
+<form action="{% url 'add_news' %}" method="POST">
+    
+        {{ form }}
+        <button type="submit" class="btn btn-primary btn-block" >Добавить новость</button>
+
+
+    </form>
+
+{% endblock %}

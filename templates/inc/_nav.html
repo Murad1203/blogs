@@ -1,0 +1,65 @@
+<nav class="head__block">
+
+                    <ul class="foot" >
+
+                        <li class="foot_item">
+                            <a class="foot_2" href="{% url 'add_news' %}">
+                                <button class="foot_2 button has-link">
+                                    <div class="foot_2">Создать Блог</div>
+                                </button>
+                            </a>
+                        </li>
+                        <li class="foot_item">
+
+
+                            <button class="foot_2 button has-link" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                Категории
+                                <i class="fa fa-angle-down" aria-hidden="true"></i>
+
+                              </button>
+                              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                  {% for item in categories %}
+                                <li class="foot_item"><a class="dropdown-item" href="category/{{ item.pk }}">{{ item.title }}</a></li>
+                                  {% endfor %}
+                              </ul>
+
+
+                            </li>
+
+                        <li class="foot_item">
+                            <a class="foot_2" href="">
+                                <button class="foot_2 button has-link">
+                                    <div class="foot_2">Контакты</div>
+                                </button>
+                            </a>
+                        </li>
+                        <li class="foot_item">
+                            <a class="foot_2" href="">
+                                <button class="foot_2 button has-link">
+                                    <div class="foot_2">О нас</div>
+                                </button>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                    <div class="divider"></div>
+
+                    <ul class="foot">
+                        <li class="foot_item">
+                            <a class="foot_2" href="#">
+
+                                <button class="foot_2 button has-link">
+                                    <div class="foot_2">Войти</div>
+                                </button>
+                            </a>
+                        </li>
+                        <li class="foot_item">
+                            <a class="foot_2" href="#">
+                                <button class="foot_2 button has-link">
+                                    <div class="foot_2">Регистрация</div>
+                                </button>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
