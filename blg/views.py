@@ -3,39 +3,76 @@ from .models import BlogApps, Category
 # Create your views here.
 from .forms import BlogsForm
 
-def blog_views(request):
-
-    content = BlogApps.objects.all()
-    categories = Category.objects.all()
-
-    return render(request, 'blog.html', {'content': content,
-                                         'categories': categories})
+from django.views.generic import ListView, DetailView, CreateView
 
 
-
-def get_category(request, category_id):
-    content = BlogApps.objects.filter(category_id = category_id)
-    categories = Category.objects.all()
-    category = Category.objects.get(pk = category_id)
-
-    return render(request, 'category.html', {'content': content,
-                                             'categories': categories,
-                                             'category': category, })
+class HomeBlog(ListView):
+    model = BlogApps
+    template_name = 'blg/blog.html'
+    context_object_name = 'content'
 
 
-def add_news(request):
-    global news
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        return context
+
+    def get_queryset(self):
+        return BlogApps.objects.filter(is_published=True)
+
+
+class BlogByCategory(ListView):
+    model = BlogApps
+    template_name = 'blg/blog.html'
+    context_object_name = 'content'
+    allow_empty = False
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = Category.objects.get(pk=self.kwargs['category_id'])
+        return context
+
+    def get_queryset(self):
+        return BlogApps.objects.filter(category_id=self.kwargs['category_id'], is_published=True)
+
+
+
+class ViewsBlogs(DetailView):
+    model = BlogApps
+    template_name = 'blg/get_blogs.html'
+
+
+
+
+class CreateBlogs(CreateView):
+    form_class = BlogsForm
+    template_name = 'blg/add-news.html'
+
+
+
+
+
+'''def add_news(request):
+
     if request.method == 'POST':
         form = BlogsForm(request.POST, request.FILES)
         if form.is_valid():
-            news = form.save()
-        #return redirect(news)
+            form.save()
+        # return redirect(news)
+
     else:
         form = BlogsForm()
-    return render(request, 'add-news.html', {'form': form, })
+    return render(request, 'blg/add-news.html', {'form': form, })'''
 
-def get_blog(request, blog_id):
 
-    item = BlogApps.objects.get(pk = blog_id)
+'''
+def get_category(request, category_id):
+    content = BlogApps.objects.filter(category_id=category_id)
 
-    return render(request, 'get_blogs.html', {'item': item})
+    category = Category.objects.get(pk=category_id)
+
+    return render(request, 'blg/category.html', {'content': content,
+                                                 'category': category, })
+'''
+'''def get_blog(request, blog_id):
+    item = BlogApps.objects.get(pk=blog_id)
+    return render(request, 'blg/get_blogs.html', {'object': item})'''

@@ -1,16 +1,14 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block category %}
 
-{% block lenta %}
-<div class="h">
-    
-    <h1 class="header__title">
-        Лента
-    </h1>
+         {% include 'inc/_sidebar.html' %}
 
-</div>
+
 {% endblock %}
+
+
 
 {% block index %}
 
@@ -23,7 +21,7 @@
     <div class="header__con">
         <div class="contents">
             <p class="User">user</p>
-            <img class="header__img" src="{{ item.photo.url }}" alt="" width="580px" height="315">
+            <img class="header__img" src="{{ item.photo.url }}" alt="" width="560" height="315">
 
                 <h2>{{ item.title|safe|truncatewords:4 }}</h2>
 
@@ -42,7 +40,7 @@
             </div>
 
             <div class="categ">
-                Категория: {{item.category}}
+                Категория: {{ item.category }}
             </div>
 
         </div>

@@ -1,11 +1,14 @@
 {% load static %}
+
+
 <!DOCTYPE html>
 
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>alpha</title>
+    <meta name="viewport" content="width= device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Новостной блог</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
@@ -28,8 +31,9 @@
 
                         <div class="header__log">
                             <p class="nav_p">
-                                <img class="nav_i" src="{% static 'img/log.png' %}" alt="log" align="middle">
-                                Blokub
+                                <!--  <img class="nav_i" src="{% static 'img/log.png' %}" alt="log" align="middle"> -->
+
+                                FichiBlog
                             </p>
                         </div>
 
@@ -51,21 +55,11 @@
                             
                             <!---Категории-->
                             <li class="foot_item">
-                                <button class="foot_2 button has-link" type="button" id="dropdownMenuButton1"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    Категория
-                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                    {% for item in categories %}
-                                    <li class="foot_item"><a class="dropdown-item"
-                                            href="{{ item.get_absolute_url }}">{{ item.title }}</a></li>
-                                    {% endfor %}
-                                </ul>
+                            {% block category %}
+                            {% endblock %}
                             </li>
-                            
-
                             <!---Контакты-->
+                            {% comment %}
                             <div class="contacty">
 
 
@@ -87,7 +81,7 @@
                                                         aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    <!--Дизайнер: Фатима <br> -->
+                                                    Дизайнер и советник: Фатима  <br>
 
                                                     Разработчик: <a class="linl_contact"
                                                         href="https://t.me/fnktw">Мурад</a>
@@ -105,7 +99,7 @@
 
                                 </li>
                             </div>
-
+                            {% endcomment %}
                             <li class="foot_item">
                                 <a class="foot_2" href="">
                                     <button class="foot_2 button has-link">
@@ -145,10 +139,6 @@
 
                     <div class="header__bottom">
 
-                        {% block lenta %}
-
-                        {% endblock %}
-
 
                         {% block index %}
 
@@ -156,12 +146,7 @@
 
                     </div>
 
-                    <div class="add_news">
 
-                        {% block add_news %}
-
-                        {% endblock %}
-                    </div>
 
 
                     
@@ -175,8 +160,9 @@
 
         </head>
     </div>
-
-
+    <div class="footer">
+        {% include 'inc/_footer.html' %}
+    </div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
@@ -185,6 +171,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
+
+
 </body>
 
 </html>

@@ -1,0 +1,124 @@
+{% load blog_tags %}
+
+<section class="ssh-footer-28-main">
+
+    <div class="footer-28">
+        <div class="wrapper">
+            <div class="d-grid grid-col-4 footer-top-28">
+                <div class="flex">
+                <div class="footer-list-28 mobile-footer-full">
+                    <h6 class="footer-title-28">Contact Info</h6>
+                    <ul>
+
+                        <li><span class="fa fa-phone"></span> Phone: <a href="tel:+7-800-999-800">+(21) 255 999 8888</a>
+                        </li>
+                        <li><span class="fa fa-mobile"></span> Mobile: <a href="tel:+7-928-961-37-00"> +(7) 928 961
+                            3700</a></li>
+                        <li><span class="fa fa-envelope-open-o"></span> E-mail: <a href="mailto:vegetables@gmail.com"
+                                                                                 class="mail"> lutkun666@gmail.com</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-list-28 mobile-footer-half">
+                    <h6 class="footer-title-28">Developers</h6>
+                    <p>Кадимова Фатима <br> Мирзоев Мурад</p>
+
+
+                </div>
+
+
+
+
+
+
+                    <div class="footer-list-28 mobile-footer-half">
+
+
+
+          <div class="obshcon">
+
+
+              <a class="contacts___link" href="https://www.instagram.com/fichiblog">
+                  <i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+              <a class="contacts___link" href="https://t.me/fnktw">
+                  <i class="fa fa-telegram fa-2x" aria-hidden="true"></i></a>
+              <a class="contacts___link" href="https://vk.com/mmmmmmm1208">
+                  <i class="fa fa-vk fa-2x" aria-hidden="true"></i></a>
+
+
+
+              <h6 class="footer-title-28 margin-top">Tags</h6>
+                    {% get_category as categories %}
+                    {% for item in categories %}
+                    <a href="{{ item.get_absolute_url }}" class="tag">{{ item.title }}</a>
+                    {% endfor %}
+
+          </div>
+
+
+      </div>
+
+
+
+
+            </div>
+
+            </div>
+        </div>
+        <div class="copyright text-center">
+            <div class="wrapper">
+                <p class="copy-footer-29">© 2021 FichiBlog. <a href="{% url 'blog_views' %}" target="_blank">FichiBlog</a></p>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% comment %}
+<div class="padval" id="footer">
+      <div class="contact">
+          <div class="blag"> В разработке участвовали:</div>
+            Фатима (Дизайнер) <br>
+           &copy; Мурад (Разработчик Основатель) <br>
+            Гусен (Помощь в фронтенд разработке)
+      </div>
+      <div class="cont_wi"> Наши контакты: <br>
+          <div class="obshcon">
+              <a class="contacts___link" href="https://wa.me/79289613700">
+                  <i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i></a>
+              <a class="contacts___link" href="https://www.instagram.com/fnktw_31">
+                  <i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+              <a class="contacts___link" href="https://t.me/fnktw">
+                  <i class="fa fa-telegram fa-2x" aria-hidden="true"></i></a>
+              <a class="contacts___link" href="https://vk.com/mmmmmmm1208">
+                  <i class="fa fa-vk fa-2x" aria-hidden="true"></i></a>
+          </div>
+
+
+      </div>
+
+
+
+  </div>
+{% endcomment %}

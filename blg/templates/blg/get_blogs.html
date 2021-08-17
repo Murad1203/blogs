@@ -6,20 +6,20 @@
 
     <div class="content__blog">
         <div class="content__image">
-            <img class="img" src="{{ item.photo.url }}" alt="" width="1220" height="550">
+            <img class="img" src="{{ object.photo.url }}" alt="" width="1220" height="550">
         </div>
         <div class="clase">
             <div class="content___title__head">
-                <h1 class=" content___title">{{ item.title }}</h1>
+                <h1 class=" content___title">{{ object.title }}</h1>
             </div>
         </div>
 
         <div class="content___text">
 
-            {{ item.content|linebreaks }}
+            {{ object.content|linebreaks }}
         </div>
         <div class="content___date">
-            Дата: {{  item.created_at|date:"SHORT_DATE_FORMAT"  }}
+            Дата: {{  object.created_at|date:"SHORT_DATE_FORMAT"  }}
         </div>
         <div class="comment">
             <a class="comment___link" href="#" >

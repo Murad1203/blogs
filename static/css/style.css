@@ -4,22 +4,34 @@
  {
 
     box-sizing: border-box;
+    
 
 }
 body {
     font-size: 17px;
     line-height: 27px;
-    font-weight: 300;
-    
+    font-weight: 300;   
+    background-image: url(fon.jpg);
 }
+
 
 .header__top {
-    height: 130px;
+    height: 74px;
     display: flex;
     justify-content: space-between;
-   
+
+    background-color: white;
+
+    z-index: 2;
+    
+    top: 0;
+    margin-bottom: 30px;
+
 }
 
+
+
+ 
 
 .container {
 
@@ -27,15 +39,20 @@ body {
     margin-left: auto;
     margin-right: auto;
     padding: 0 10px;
-
+    margin-top: auto;
+    margin-bottom: auto;
 
 }
+
 
 a {
     text-decoration: none;
     color: inherit;
 }
-
+.foot_item {
+    text-decoration: none;
+    color: inherit;
+}
 .nav_p {
     
     
@@ -43,74 +60,37 @@ a {
     font-family: inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
     color: rgb(0, 0, 0);
     font-weight: bold;
+    margin-top: auto;
+    margin-bottom: auto;
+    
     
 
 }
 
-.ob_2 button {
-    
-    text-transform: none;
-    -webkit-appearance: button;
-    height: 30px;
-    border-radius: 3px;
-    border: none;
-    padding: 0 10px;
-    transition: background 250ms;
-    background: transparent;
-    outline: none;
-    font-weight: 500;
-    font-size: 15px;
-    cursor: pointer;
-    
-    
-}
-.ob_2:hover {
-    background-color: #f9f5f1;
-	
-}
 
-.ob {
-    list-style: none;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
+.head__block {   
     display: flex;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    
-    margin-top: 50px;
-    
-    
-    
-}
-td, th, ul {
-    padding: 0;
+    justify-content: space-between;
 }
 
 
 
+.divider {
 
-ul {
-    display: block;
-    list-style-type: disc;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
+
+    width: 1px;
+    background: rgba(0, 0, 0, 0.1);
+    height: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+
+
     
-    
-    margin-right: auto;
     
 }
 
 .foot {
-    
-    
-    
-    margin-top: 50px;
+    display: flex;
     -webkit-align-items: center;
     -webkit-box-align: center;
     align-items: center;
@@ -118,7 +98,9 @@ ul {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
-    display: flex;
+    padding: 0 10px;
+    margin-top: auto;
+    margin-bottom: auto;
     
 
 }
@@ -131,14 +113,247 @@ ul {
     border: none;
     
     transition: background 250ms;
+    
     background: transparent;
     outline: none;
     font-weight: 500;
     font-size: 15px;
     cursor: pointer;
 }
-.foot_2:hover {
-    background-color: #f9f5f1;
+.foot_item:hover {
+    background-color: #f7f5f3;
+    border-radius: 3px;
 	
 }
 
+.header__con {
+    
+
+    padding: 20px;
+    padding-top: 30px;
+    width: 600px;
+    height: 630px;
+    border-radius: 15px;
+
+    -webkit-box-shadow: 4px 4px 24px 2px rgba(34, 60, 80, 0.19);
+    -moz-box-shadow: 4px 4px 24px 2px rgba(34, 60, 80, 0.19);
+    box-shadow: 4px 4px 24px 2px rgba(34, 60, 80, 0.19);
+
+    margin-bottom: 40px;
+    background-color: white;
+    position: relative;
+        
+
+}
+
+.header__con:hover {
+
+    -webkit-box-shadow: 1px 1px 33px -3px rgba(0, 0, 0, 0.34);
+    -moz-box-shadow: 1px 1px 33px -3px rgba(0, 0, 0, 0.34);
+    box-shadow: 1px 1px 33px -3px rgba(0, 0, 0, 0.34);
+
+   
+
+}
+
+.con__button {
+
+    
+    width: 127px;
+    height: 44px;
+    
+    color: rgb(255, 255, 255);
+    text-align: center;
+    
+
+    background: #000000;
+    border-radius: 10px;
+    
+    position: absolute;
+
+    bottom: 10px;
+    right: 10px;
+       
+}
+.content__line {
+    padding-top: 5px;
+    padding-bottom: 20px;
+
+    height: 90px;
+    
+    
+}
+.con__link {
+
+    float: right;
+    
+
+}
+.header__content {
+    padding-top: 30px;
+    padding: 10px;
+    
+    
+}
+.h {
+
+    margin-bottom: 20px;
+
+
+    
+}
+
+.header__cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.comment__button {
+    width: 150px;
+    height: 44px;
+    
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    border-radius: 10px;
+    position: absolute;
+
+    bottom: 10px;
+    left: 10px;
+
+
+    -webkit-box-shadow: 0px 0px 31px -10px rgba(34, 60, 80, 0.26);
+    -moz-box-shadow: 0px 0px 31px -10px rgba(34, 60, 80, 0.26);
+    box-shadow: 0px 0px 31px -10px rgba(34, 60, 80, 0.26);
+    font: bold;
+}
+
+.header__img {
+  
+    border-radius: 10px;
+    margin-bottom: 5px;
+    
+}
+.User {
+    margin-bottom: 5px;
+
+}
+.cat {
+    position: absolute;
+    top: 0;
+}
+.is__published {
+    
+    margin-top: 15px;
+    margin-left: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+.dropdown-item {
+    font-weight: bold;
+}
+
+.dropdown-item:hover {
+    color: white;
+    background-color: black;
+    font-family: monospace;
+}
+.categ {
+    font-weight:bolder
+}
+.published {
+    font-weight:bolder
+}
+.btn {
+    color: white;
+    background-color: black;
+}
+.btn:hover {
+    color: white;
+    background-color: black;
+}
+
+
+
+/*  отдельный блог  */
+.content__blog {
+    background-color: white;
+    
+}
+.content___text {
+    font-family: serif;
+    margin: 114px;
+
+    font-size: 22px;
+}
+.content___title {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    font-weight: bold;
+
+    text-align: center;
+}
+
+.content___date {
+    font-size: 20px;   
+}
+
+.comment___button {
+    width: 150px;
+    height: 44px;
+    
+    background-color: rgb(255, 255, 255);
+    
+    border-radius: 10px;
+    
+    bottom: 10px;
+    left: 10px;
+
+    font: bold;
+}
+
+.content___title__head {
+        margin-top: 20px;
+            
+}
+.clase {
+    padding-top: 20px; 
+}
+
+.content__blog {
+    margin-top: 50PX;
+}
+
+.padval {
+    height: 150px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.cont_wi {
+    margin: 10px;
+    padding: 10px;
+
+
+}
+.obshcon {
+    margin: 5px;
+    padding-top: 10px;
+}
+.contact {
+    margin: 10px;
+}
+.contacts___link {
+    color: inherit;
+    padding: 5px;
+}
+.blag {
+    padding-bottom: 7px;
+}

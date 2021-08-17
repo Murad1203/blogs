@@ -4,7 +4,7 @@ from .models import BlogApps
 class BlogsForm(forms.ModelForm):
     class Meta:
         model = BlogApps
-        fields = ['title', 'content','photo', 'is_published', 'category']
+        fields = ['title', 'content', 'photo', 'is_published', 'category']
         widgets = {
             'title': forms.TextInput(attrs={'class' : 'form-control'}),
             'content': forms.Textarea(attrs={'class': 'form-control', 'rows':5}),
