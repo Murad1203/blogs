@@ -18,15 +18,12 @@ body {
 
 .header__top {
 
-    height: 125px;
+    height: 100px;
+
     display: flex;
     justify-content: space-between;
+    background-color: rgba(224, 140, 222, 0.56);
 
-    background-color: #a1bfdd;
-
-    z-index: 2;
-    
-    top: 0;
     margin-bottom: 30px;
 
 }
@@ -35,7 +32,7 @@ body {
  
 
 .container {
-    max-width: 1800px;
+    max-width: 2200px;
     margin-left: auto;
     margin-right: auto;
     padding: 0 10px;
@@ -45,8 +42,10 @@ body {
 }
 
 
-.header__log {
-    margin: 20px;
+.log {
+
+    margin: 10px;
+
 
 }
 
@@ -54,6 +53,19 @@ a {
     text-decoration: none;
     color: inherit;
 }
+.search_div {
+    background-color: #c409e5;
+    border-radius: 15px;
+}
+.search_button {
+    border-radius: 0 15px 15px 0;
+    background-color: inherit;
+}
+.search_input {
+    border-radius: 15px 0 0 15px;
+     background-color: inherit;
+}
+
 .foot_item {
     text-decoration: none;
     color: inherit;
@@ -73,24 +85,15 @@ a {
 }
 
 
-.head__block {   
-    display: flex;
-    justify-content: space-between;
-}
-
-
 
 .divider {
 
 
     width: 1px;
-    background: rgba(0, 0, 0, 0.1);
+    background: rgb(208, 33, 33);
     height: 20px;
     margin-top: auto;
     margin-bottom: auto;
-
-
-    
     
 }
 
@@ -101,18 +104,13 @@ a {
 
 .foot {
     display: flex;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
+
+    padding: 0 40px;
     align-items: center;
     list-style: none;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    padding: 0 10px;
+
     margin-top: auto;
     margin-bottom: auto;
-    
-
 }
 
 .foot_2 {
@@ -121,13 +119,13 @@ a {
     height: 30px;
     border-radius: 3px;
     border: none;
-    
+
     transition: background 250ms;
-    
+
     background: transparent;
     outline: none;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 20px;
     cursor: pointer;
 }
 .foot_item:hover {
@@ -141,9 +139,9 @@ a {
 
     padding: 20px;
     padding-top: 30px;
-    width: 800px;
-    height: 730px;
-    border-radius: 15px;
+    width: 100%;
+    height: 700px;
+    border-radius: 0px 267px;
 
     -webkit-box-shadow: 4px 4px 24px 2px rgba(34, 60, 80, 0.19);
     -moz-box-shadow: 4px 4px 24px 2px rgba(34, 60, 80, 0.19);
@@ -162,7 +160,7 @@ a {
     -moz-box-shadow: 1px 1px 33px -3px rgba(0, 0, 0, 0.34);
     box-shadow: 1px 1px 33px -3px rgba(0, 0, 0, 0.34);
 
-   
+
 
 }
 

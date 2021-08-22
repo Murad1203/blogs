@@ -4,7 +4,7 @@ from .models import BlogApps, Category
 from .forms import BlogsForm
 
 from django.views.generic import ListView, DetailView, CreateView
-
+from django.urls import reverse_lazy
 
 class HomeBlog(ListView):
     model = BlogApps
@@ -46,7 +46,7 @@ class ViewsBlogs(DetailView):
 class CreateBlogs(CreateView):
     form_class = BlogsForm
     template_name = 'blg/add-news.html'
-
+    success_url = reverse_lazy('blog_views')
 
 
 

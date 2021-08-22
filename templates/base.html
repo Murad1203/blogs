@@ -23,30 +23,29 @@
         <head class="header">
             <div class="container">
 
-                <div class="header__top">
-
-
+                    <div class="header__top">
 
                     <a class="header_link" href="{% url 'blog_views' %}">
-
-                        <div class="header__log">
-
-
-                                    <object data="" type="image/svf+xml">
-                                        <img src="{% static 'img/FICHIBLOG.svg' %}" alt="">
-                                    </object>
-
-
-
+                        <div class="log">
+                            <img  class="h__img" src="{% static 'img/FICHIBLOG.svg' %}" alt="">
                         </div>
-
                     </a>
+                        <ul class="foot">
+                            <li class="foot_item">
+
+                                        <div class="search_div">
+                                            <form class="search" >
+                                                <input class="search_input" type="search" placeholder="Найти статью" aria-label="Search">
+                                                <a href="#"><button class="search_button">Поиск</button></a>
+                                            </form>
+                                        </div>
 
 
-                    <nav class="head__block">
+
+                            </li>
+                        </ul>
 
                         <ul class="foot">
-
                             <li class="foot_item">
                                 <a class="foot_2" href="{% url 'add_news' %}">
                                     <button class="foot_2 button has-link">
@@ -55,54 +54,13 @@
                                 </a>
                             </li>
 
-                            
-                            <!---Категории-->
+
+                            <!---Категория-->
                             <li class="foot_item">
-                            {% block category %}
-                            {% endblock %}
+                                {% block category %}
+                                {% endblock %}
                             </li>
-                            <!---Контакты-->
-                            {% comment %}
-                            <div class="contacty">
 
-
-                                <li class="foot_item">
-
-                                    <button type="button" class="foot_2 button has-link" data-bs-toggle="modal"
-                                        data-bs-target="#staticBackdrop">
-                                        <div class="foot_2">
-                                            Разработчики</div>
-                                    </button>
-                                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
-                                        data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
-                                        aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="staticBackdropLabel">Разработчики</h5>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                        aria-label="Close"></button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    Дизайнер и советник: Фатима  <br>
-
-                                                    Разработчик: <a class="linl_contact"
-                                                        href="https://t.me/fnktw">Мурад</a>
-
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary"
-                                                        data-bs-dismiss="modal">Закрыть</button>
-
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-
-                                </li>
-                            </div>
-                            {% endcomment %}
                             <li class="foot_item">
                                 <a class="foot_2" href="">
                                     <button class="foot_2 button has-link">
@@ -111,11 +69,12 @@
                                 </a>
                             </li>
 
+
                         </ul>
 
-                        <div class="divider"></div>
+                            <ul class="foot">
 
-                        <ul class="foot">
+
                             <li class="foot_item">
                                 <a class="foot_2" href="#">
 
@@ -124,6 +83,9 @@
                                     </button>
                                 </a>
                             </li>
+
+                        <div class="divider"></div>
+
                             <li class="foot_item">
                                 <a class="foot_2" href="#">
                                     <button class="foot_2 button has-link">
@@ -132,7 +94,9 @@
                                 </a>
                             </li>
                         </ul>
-                    </nav>
+                    <!--  </nav> -->
+
+
 
                 </div>
 
